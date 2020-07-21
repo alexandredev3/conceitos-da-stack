@@ -1,8 +1,10 @@
 const express = require('express');
+const cors = require('cors');
 const { uuid, isUuid } = require('uuidv4');
 // O isUuid ele vai verificar se o id e valido ou não.
 
 const app = express();
+app.use(cors());
 
 app.use(express.json());
 // O "use" e quando nos queremos adicionar alguma função que sera passado para todas as rotas.
